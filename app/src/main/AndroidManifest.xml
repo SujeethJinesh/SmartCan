@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.android.example.com.smartcan" >
 
+<<<<<<< HEAD
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -14,10 +15,16 @@
 
     <application
         android:name=".SmartCanDB"
+=======
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+>>>>>>> 9ff27d0b29d1a412b1e2bd2d361e67078e433c53
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/AppTheme" >
 
         <!--
@@ -33,15 +40,23 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".FrontPage" >
+=======
+        android:theme="@style/AppTheme"
+        android:name=".SmartCanDB">
+        <activity android:name=".MainActivity" >
+>>>>>>> 9ff27d0b29d1a412b1e2bd2d361e67078e433c53
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".ListPage" />
         <activity android:name=".ConsumerStatus" />
         <activity android:name=".MapsActivity" />
+=======
+>>>>>>> 9ff27d0b29d1a412b1e2bd2d361e67078e433c53
     </application>
 
 </manifest>

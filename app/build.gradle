@@ -5,12 +5,19 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
+<<<<<<< HEAD
         applicationId "app.android.example.com.smartcan"
+=======
+        applicationId "app.android.example.com.firebasepractice"
+>>>>>>> 9ff27d0b29d1a412b1e2bd2d361e67078e433c53
         minSdkVersion 23
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+<<<<<<< HEAD
         multiDexEnabled true
+=======
+>>>>>>> 9ff27d0b29d1a412b1e2bd2d361e67078e433c53
     }
     buildTypes {
         release {
@@ -19,16 +26,20 @@ android {
         }
     }
 
+<<<<<<< HEAD
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
 
+=======
+>>>>>>> 9ff27d0b29d1a412b1e2bd2d361e67078e433c53
     packagingOptions {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/LICENSE-FIREBASE.txt'
         exclude 'META-INF/NOTICE'
     }
+<<<<<<< HEAD
 
 }
 
@@ -53,4 +64,16 @@ dependencies {
 
 
 
+=======
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.firebase:firebase-client-android:2.3.1'
+    compile 'com.firebaseui:firebase-ui:0.3.1'
+}
+
+>>>>>>> 9ff27d0b29d1a412b1e2bd2d361e67078e433c53
 apply plugin: 'com.google.gms.google-services'

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SmartCan</string>
+<<<<<<< HEAD
     <string name="title_activity_maps">Map</string>
+=======
+>>>>>>> 9ff27d0b29d1a412b1e2bd2d361e67078e433c53
 </resources>

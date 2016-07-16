@@ -3,7 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+<<<<<<< HEAD
     <color name="transparent">#00000000</color>
     <color name="white">#E0E0E0</color>
     <color name="background">#659CEF</color>
+=======
+>>>>>>> 9ff27d0b29d1a412b1e2bd2d361e67078e433c53
 </resources>
