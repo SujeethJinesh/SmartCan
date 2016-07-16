@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "114624544149",
+    "firebase_url": "https://crowdweather-616d0.firebaseio.com",
+    "project_id": "crowdweather-616d0",
+    "storage_bucket": "crowdweather-616d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114624544149:android:a9c60f4393d63a80",
+        "android_client_info": {
+          "package_name": "app.android.example.com.firebasepractice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114624544149-4cpoes9kdpbhfak5uac2mrfms6nrba29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArXIQfruiqFNzLW4DiwZY1aZ368lD0LJ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
