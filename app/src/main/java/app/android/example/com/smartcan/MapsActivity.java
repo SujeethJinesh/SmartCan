@@ -1,20 +1,26 @@
 package app.android.example.com.smartcan;
 
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private Button optimalRouteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +46,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        optimalRouteButton = (Button) findViewById(R.id.optimal_route_button);
+
+
+        optimalRouteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO:
+            }
+        });
+
         // Add a marker in Sydney and move the camera
         LatLng currentLoc = new LatLng(37.778535, -122.389483);
         mMap.addMarker(new MarkerOptions().position(currentLoc).title("Marker at your location"));
@@ -55,8 +71,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
         mMap.setMyLocationEnabled(true);
+        drawDefaultMarker();
+    }
 
-        mMap.moveCamera((CameraUpdateFactory.zoomTo(15)));
+    private void drawDefaultMarker() {
+        LatLng tutorPosition = new LatLng(37.778535, -122.389483);
+        MarkerOptions tutorMarkerOptions = new MarkerOptions();
+        tutorMarkerOptions.position(tutorPosition).title("Can1").snippet("100% full");
+        Marker tutorMarker = mMap.addMarker(tutorMarkerOptions);
+        tutorMarker.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(tutorPosition));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(12), 2000, null);
+
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+//                Intent intent1 = new Intent(MapsActivity.this, InstantMessaging.class);
+//                String title = marker.getTitle();
+//                intent1.putExtra("markertitle", title);
+//                startActivity(intent1);
+
+            }
+        });
+    }
+
+    private void drawMarker(Location location) {
+        mMap.clear();
+        LatLng currentPosition = new LatLng(location.getLatitude(), location.getLongitude());
+        mMap.addMarker(new MarkerOptions()
+                .position(currentPosition));
     }
 
 //    private GoogleMap mMap;
