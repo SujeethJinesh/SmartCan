@@ -31,6 +31,9 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <meta-data android:name="android.webkit.WebView.MetricsOptOut"
+            android:value="true" />
+
         <activity android:name=".FrontPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,6 +44,7 @@
         <activity android:name=".ListPage" />
         <activity android:name=".ConsumerStatus" />
         <activity android:name=".MapsActivity" />
+        <activity android:name=".OptimalRoute"/>
     </application>
 
 </manifest>

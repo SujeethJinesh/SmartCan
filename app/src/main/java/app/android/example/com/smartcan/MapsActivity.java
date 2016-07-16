@@ -1,5 +1,6 @@
 package app.android.example.com.smartcan;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private Button optimalRouteButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +50,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         optimalRouteButton = (Button) findViewById(R.id.optimal_route_button);
 
-
         optimalRouteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //TODO:
+                Intent intent = new Intent(v.getContext(), OptimalRoute.class);
+                startActivity(intent);
             }
         });
 
@@ -74,8 +77,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         drawDefaultMarker();
     }
 
+
+
     private void drawDefaultMarker() {
-        LatLng tutorPosition = new LatLng(37.778535, -122.389483);
+        LatLng tutorPosition = new LatLng(37.77855, -122.38943);
         MarkerOptions tutorMarkerOptions = new MarkerOptions();
         tutorMarkerOptions.position(tutorPosition).title("Can1").snippet("100% full");
         Marker tutorMarker = mMap.addMarker(tutorMarkerOptions);
