@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "420861720275",
+    "firebase_url": "https://smartcan-1374.firebaseio.com",
+    "project_id": "smartcan-1374",
+    "storage_bucket": "smartcan-1374.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420861720275:android:99336cb3f6144b19",
+        "android_client_info": {
+          "package_name": "app.android.example.com.smartcan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420861720275-jg5djejf67vtk3dhor5f85k7uqrv4hfr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8elKa5CHuwMUuUr90feLFpMS7lLXddfc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
